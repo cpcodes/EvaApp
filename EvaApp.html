@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Eva's Chore Picker App</title>
+<style>
+    h2 {
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+<h1>Chore Picker</h1>
+<p>This program will pick a random chore for you to do today.</p>
+
+<div id="root">
+    <p style="font-weight: bold">Your chore for today is:</p>
+    <h2 id="output">Your browser doesn't run Javascript!</h2>
+    <img id="image" src="">
+</div>
+
+<script>
+    const choices = [
+        "Clean the litterbox",
+        "Feed the pets",
+        "Brush the pets",
+        "Dust",
+        "Clean the toilets"
+        // TODO: Water the flowers, sweep the house, play with animals, pick up doggy doo
+        // do the dishes, straighten up (make beds, put stuff away, etc.), laundry
+        // clean pool, take out the trash, get the mail
+        // yard work, wipe fog off mirrors, vaccuum, set table, wipe windows, check fridge water, 
+        // charge everything(night), lock up(night), check for needed items(groceries )
+    ];
+    const images = [
+        "cleanlitter.webp",
+        "feedpets.jpg",
+        "brushpets.webp",
+        "dust.jpg",
+        "cleantoilet.webp"
+    ]
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    let choice = getRandomInt(5);
+    // result += choice + ": " + choices[choice];
+    let result = (choices[choice]);
+    // console.log(result);
+    //const html = ""
+    // document.getElementById("root").style.color = "black";
+    document.getElementById("output").innerHTML = result;
+    document.getElementById("image").src = images[choice];
+</script>
+</body>
+</html>
