@@ -7,11 +7,21 @@
 <body>
 
 <h1>Chore Picker</h1>
-<p style="text-align: center">This program will pick a random chore for you to do today.</p>
+<p style="text-align: center">This program assigns chores to a group of people.</p>
+<div id="inputnames">
+    <p>Enter the names of the people, separated by commas</p>
+    <input id="names"></input>
+    <button id="submitNames" onclick="submitNames()">Submit</button>
+    <div id="errorMessage" style="color: red"></div>
+</div>
 <div id="root">
     <p style="font-weight: bold; text-align: center">Your chore for today is:</p>
-    <h2 id="output">Your browser doesn't run Javascript!</h2>
-    <img id="image" src="">
+    <noscript>
+        <div style="color: red; text-align: center;">
+            Your browser does not support JavaScript or it is disabled. Please enable JavaScript to use this app.
+        </div>
+    </noscript>
+    <img id="image" src="placeholder1k.svg" style="max-width: 250px; max-height: 250px">
 </div>
 <script src="evaappvariables.js" type="text/Javascript"></script>
 <script src="evaapp.js" type="text/Javascript"></script>
