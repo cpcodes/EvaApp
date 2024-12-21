@@ -20,6 +20,9 @@ function submitNames() {
 
     console.log(weeklyAssignments);
     displayAssignments(weeklyAssignments);
+
+    // Show the root div and the chores message
+    document.getElementById("root").style.display = "block";
 }
 
 function displayAssignments(assignments) {
